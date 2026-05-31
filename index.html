@@ -1,1 +1,352 @@
-<!DOCTYPE html><html><head><title>Bozeman Church House</title></head><body><h1>Bozeman Church House</h1><p>Coming soon. Until then, reach out if you want to know more.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bozeman Church House — Church, in an office in Midtown Bozeman</title>
+  <meta name="description" content="A Church House in Midtown Bozeman. Real teaching, real people, real coffee. Sundays at 10:00 AM." />
+
+  <meta property="og:title" content="Bozeman Church House" />
+  <meta property="og:description" content="Come find church where you didn't expect it. Sundays at 10:00 AM in Midtown Bozeman." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300..700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #FAF6EF; --cream-deep: #F2EBDE; --ink: #1F1B17; --ink-soft: #4A423B;
+      --ink-mute: #847A6F; --rule: #E0D6C2; --al-blue: #2C5F84; --al-blue-deep: #1F4665;
+      --tan: #B89878; --moss: #6B7A5C; --white: #FFFFFF;
+      --display: "Fraunces", Georgia, serif;
+      --body: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --max: 1120px; --gutter: clamp(1.25rem, 4vw, 2.5rem);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--body); font-weight: 400; font-size: 17px; line-height: 1.65; color: var(--ink); background: var(--cream); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    main, header, footer { position: relative; z-index: 1; }
+    h1, h2, h3, h4 { font-family: var(--display); font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--al-blue); text-decoration: none; border-bottom: 1px solid currentColor; transition: color 0.2s; }
+    a:hover { color: var(--al-blue-deep); }
+    .container { max-width: var(--max); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+    section { padding: clamp(4rem, 9vw, 7rem) 0; }
+    .ornament { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 auto; width: fit-content; color: var(--tan); }
+    .ornament::before, .ornament::after { content: ""; width: 36px; height: 1px; background: currentColor; }
+    .ornament svg { width: 16px; height: 16px; }
+    .eyebrow { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 1.25rem; }
+    .topnav { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); background: var(--cream); }
+    .topnav .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .brand { font-family: var(--display); font-weight: 500; font-size: 18px; letter-spacing: -0.01em; color: var(--ink); border: none; }
+    .brand .dot { color: var(--al-blue); }
+    .topnav .cta-link { font-size: 14px; color: var(--ink-soft); border-bottom: none; }
+    .topnav .cta-link:hover { color: var(--al-blue); }
+    .hero { padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 7vw, 5rem); }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+    @media (min-width: 880px) { .hero-grid { grid-template-columns: 1.3fr 1fr; gap: 4rem; } }
+    .hero h1 { font-size: clamp(2.5rem, 6.5vw, 4.75rem); font-weight: 400; font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0; letter-spacing: -0.02em; line-height: 1.02; color: var(--ink); margin-bottom: 1.5rem; }
+    .hero h1 .accent { font-style: italic; color: var(--al-blue); font-variation-settings: "opsz" 144, "SOFT" 100; }
+    .hero-sub { font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.4; color: var(--ink-soft); max-width: 30ch; margin-bottom: 2.25rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem 2.25rem; margin-bottom: 2.5rem; font-size: 14px; color: var(--ink-soft); }
+    .hero-meta strong { display: block; font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 4px; }
+    .hero-image { aspect-ratio: 4 / 3; border-radius: 4px; position: relative; overflow: hidden; background: var(--cream-deep); }
+    .hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .btn { display: inline-block; padding: 14px 28px; font-family: var(--body); font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
+    .btn-primary { background: var(--al-blue); color: var(--cream); }
+    .btn-primary:hover { background: var(--al-blue-deep); transform: translateY(-1px); color: var(--cream); }
+    .what { background: var(--cream-deep); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .what-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; max-width: 880px; margin: 0 auto; }
+    @media (min-width: 720px) { .what-grid { grid-template-columns: 1fr 1.6fr; gap: 4rem; } }
+    .what h2 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .what-body p { font-size: 17px; line-height: 1.7; color: var(--ink-soft); }
+    .rhythm h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); text-align: center; font-weight: 400; max-width: 14ch; margin: 0 auto 0.75rem; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .rhythm .lead { text-align: center; color: var(--ink-soft); max-width: 50ch; margin: 0 auto 4rem; font-size: 1.05rem; }
+    .rhythm-list { max-width: 720px; margin: 0 auto; list-style: none; padding: 0; }
+    .rhythm-item { display: grid; grid-template-columns: 90px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--rule); position: relative; }
+    .rhythm-item:last-child { border-bottom: none; }
+    @media (min-width: 600px) { .rhythm-item { grid-template-columns: 140px 1fr; gap: 3rem; } }
+    .rhythm-time { font-family: var(--display); font-style: italic; font-size: 1.35rem; color: var(--al-blue); font-weight: 400; line-height: 1.1; }
+    .rhythm-time small { display: block; font-style: normal; font-family: var(--body); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-top: 6px; }
+    .rhythm-body h3 { font-size: 1.25rem; font-weight: 500; margin-bottom: 0.5rem; }
+    .rhythm-body p { color: var(--ink-soft); font-size: 16px; }
+    .sermons { background: var(--ink); color: var(--cream); padding: clamp(4rem, 8vw, 6rem) 0; }
+    .sermons-card { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; text-align: center; }
+    @media (min-width: 720px) { .sermons-card { grid-template-columns: auto 1fr; gap: 3.5rem; text-align: left; } }
+    .sermons-play { width: 88px; height: 88px; border-radius: 50%; background: var(--al-blue); display: flex; align-items: center; justify-content: center; margin: 0 auto; flex-shrink: 0; transition: background 0.2s; }
+    @media (min-width: 720px) { .sermons-play { margin: 0; } }
+    .sermons-card:hover .sermons-play { background: var(--al-blue-deep); }
+    .sermons-play svg { width: 32px; height: 32px; fill: var(--cream); margin-left: 4px; }
+    .sermons .eyebrow { color: var(--tan); opacity: 0.85; }
+    .sermons h2 { color: var(--cream); font-size: clamp(1.85rem, 3.6vw, 2.5rem); font-weight: 400; margin-bottom: 1rem; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .sermons p { color: var(--cream); opacity: 0.85; max-width: 50ch; margin-bottom: 1.75rem; }
+    @media (max-width: 719px) { .sermons p { margin-left: auto; margin-right: auto; } }
+    .btn-sermon { display: inline-block; padding: 13px 26px; background: transparent; color: var(--cream); border: 1px solid rgba(250, 246, 239, 0.4); border-radius: 2px; font-family: var(--body); font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn-sermon:hover { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+    .about { background: var(--cream-deep); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; }
+    @media (min-width: 880px) { .about-grid { grid-template-columns: 0.85fr 1.15fr; gap: 4.5rem; } }
+    .about-photo { aspect-ratio: 4 / 5; border-radius: 4px; position: relative; overflow: hidden; background: var(--cream-deep); }
+    .about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about h2 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; margin-bottom: 1.75rem; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .about-body p { color: var(--ink-soft); font-size: 17px; line-height: 1.75; max-width: 60ch; }
+    .about-sig { margin-top: 2rem; font-family: var(--display); font-style: italic; color: var(--ink); font-size: 1.05rem; }
+    .paradigm { background: var(--cream); }
+    .paradigm-card { max-width: 920px; margin: 0 auto; padding: clamp(2.25rem, 5vw, 3.5rem); background: var(--white); border: 1px solid var(--rule); border-radius: 4px; position: relative; overflow: hidden; }
+    .paradigm-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--moss); }
+    .paradigm-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
+    @media (min-width: 820px) { .paradigm-grid { grid-template-columns: 1.6fr 1fr; gap: 3.5rem; } }
+    .paradigm .eyebrow { color: var(--moss); }
+    .paradigm h2 { font-size: clamp(1.85rem, 3.8vw, 2.5rem); font-weight: 400; margin-bottom: 1.5rem; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .paradigm h2 em { color: var(--moss); font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; }
+    .paradigm-body p { color: var(--ink-soft); font-size: 16px; line-height: 1.7; margin-bottom: 1em; }
+    .paradigm-meta { background: var(--cream-deep); border-radius: 3px; padding: 1.75rem; border-left: 3px solid var(--moss); }
+    .paradigm-meta h4 { font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 0.5rem; }
+    .paradigm-meta .when { font-family: var(--display); font-size: 1.25rem; font-weight: 500; color: var(--ink); line-height: 1.25; margin-bottom: 1rem; }
+    .paradigm-meta .when em { font-style: italic; color: var(--moss); }
+    .paradigm-meta .when-note { font-family: var(--body); font-size: 13px; color: var(--ink-mute); font-style: italic; margin-top: -0.35rem; margin-bottom: 0; }
+    .paradigm-meta p { font-size: 14px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 0; }
+    .paradigm-meta .meta-link { display: inline-block; margin-top: 1.25rem; font-size: 14px; color: var(--moss); border-bottom: 1px solid var(--moss); font-weight: 500; }
+    .paradigm-meta .meta-link:hover { color: var(--ink); border-color: var(--ink); }
+    .believe { text-align: center; }
+    .believe-card { max-width: 680px; margin: 0 auto; padding: clamp(2rem, 5vw, 3.5rem); background: var(--white); border: 1px solid var(--rule); border-radius: 4px; }
+    .believe h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-bottom: 1.5rem; font-weight: 400; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .believe p { color: var(--ink-soft); max-width: 50ch; margin-left: auto; margin-right: auto; }
+    .faq { background: var(--cream-deep); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .faq h2 { text-align: center; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; margin-bottom: 3rem; font-variation-settings: "opsz" 144, "SOFT" 30; }
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: var(--display); font-weight: 500; font-size: 1.2rem; color: var(--ink); margin-bottom: 0.5rem; }
+    .faq-a { color: var(--ink-soft); font-size: 16px; line-height: 1.65; }
+    .cta { text-align: center; }
+    .cta h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 400; max-width: 18ch; margin: 0 auto 1.25rem; font-variation-settings: "opsz" 144, "SOFT" 50; }
+    .cta h2 em { color: var(--al-blue); font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; }
+    .cta-lead { color: var(--ink-soft); max-width: 48ch; margin: 0 auto 3rem; font-size: 1.05rem; }
+    .form { max-width: 540px; margin: 0 auto; text-align: left; }
+    .form-row { margin-bottom: 1.25rem; }
+    .form label { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.5rem; font-weight: 500; }
+    .form input, .form textarea { width: 100%; padding: 12px 14px; font-family: var(--body); font-size: 16px; color: var(--ink); background: var(--white); border: 1px solid var(--rule); border-radius: 2px; outline: none; transition: border 0.2s; }
+    .form input:focus, .form textarea:focus { border-color: var(--al-blue); }
+    .form textarea { min-height: 120px; resize: vertical; }
+    .form .checkbox { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--ink-soft); margin-bottom: 1.5rem; }
+    .form .checkbox input { width: auto; }
+    .form-submit { text-align: center; margin-top: 1.5rem; }
+    footer { background: var(--ink); color: var(--cream); padding: 4rem 0 3rem; }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+    @media (min-width: 680px) { .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; } }
+    .footer-grid h4 { color: var(--cream); font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.85rem; opacity: 0.6; }
+    .footer-grid p, .footer-grid a { color: var(--cream); font-size: 15px; line-height: 1.6; border-bottom: none; opacity: 0.95; }
+    .footer-grid a:hover { opacity: 1; text-decoration: underline; }
+    .footer-verse { font-family: var(--display); font-style: italic; font-size: 1.2rem; line-height: 1.5; color: var(--cream); opacity: 0.85; max-width: 30ch; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.15); margin: 0 auto; text-align: center; }
+    .footer-verse cite { display: block; font-style: normal; font-family: var(--body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 1rem; opacity: 0.6; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .hero h1, .hero-sub, .hero-meta, .hero .btn, .hero-image { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+    .hero-sub { animation-delay: 0.1s; }
+    .hero-meta { animation-delay: 0.2s; }
+    .hero .btn { animation-delay: 0.3s; }
+    .hero-image { animation-delay: 0.15s; }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="container">
+      <a href="#" class="brand">Bozeman Church House<span class="dot">.</span></a>
+      <a href="#come-sunday" class="cta-link">Come this Sunday →</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1>Church, in an <span class="accent">office</span> in Midtown Bozeman.</h1>
+            <p class="hero-sub">Come find church where you didn't expect it.</p>
+            <div class="hero-meta">
+              <div><strong>When</strong>Sundays · 10:00 AM Service</div>
+              <div><strong>Where</strong>Aspen Crossing — Midtown<br>515 W. Aspen Street, 200C</div>
+            </div>
+            <a href="#come-sunday" class="btn btn-primary">Come this Sunday</a>
+          </div>
+          <div class="hero-image">
+            <img src="aspen-crossing.webp" alt="Aspen Crossing building in Midtown Bozeman" />
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="what">
+      <div class="container">
+        <div class="what-grid">
+          <div>
+            <p class="eyebrow">What it is</p>
+            <h2>A church that meets in a home.</h2>
+          </div>
+          <div class="what-body">
+            <p>A Church House is exactly what it sounds like — a church that meets in a home. In our case, an office in Midtown Bozeman built for gathering people together.</p>
+            <p>Every Sunday morning we make good coffee, gather as a community, and stream the live service from <a href="https://abundant-life.com" target="_blank" rel="noopener">Abundant Life</a> — our parent church. After the message, we ask how we can pray for one another and then go out into the world to be living proof of a loving God to a watching world.</p>
+            <p>It's smaller than a regular church. It's warmer than streaming alone on your couch. It's a real church family.</p>
+            <p>Church Houses are a global movement. Homes and offices around the world, all watching the same Abundant Life service every Sunday, all built on the same idea: real church doesn't need a building. It needs people, the Word, and Jesus in the middle of it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rhythm">
+      <div class="container">
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 L21 12 L12 21 L3 12 Z" /></svg>
+        </div>
+        <h2 style="margin-top: 1rem;">The rhythm of a Sunday</h2>
+        <p class="lead">Predictable enough to feel safe. Loose enough to feel human.</p>
+        <ul class="rhythm-list">
+          <li class="rhythm-item">
+            <div class="rhythm-time">9:45<small>AM</small></div>
+            <div class="rhythm-body">
+              <h3>Doors open. Coffee, conversation, arriving.</h3>
+              <p>Pour a cup of good coffee, meet a few people, settle in. On the <strong>first Sunday of every month</strong>, we do breakfast together before service.</p>
+            </div>
+          </li>
+          <li class="rhythm-item">
+            <div class="rhythm-time">10:00<small>AM</small></div>
+            <div class="rhythm-body">
+              <h3>The service streams in.</h3>
+              <p>We gather everyone in the main room and watch the live service from Abundant Life — about an hour of worship and teaching from Lead Pastor Phil Hopper. The same service streamed simultaneously to Church Houses around the world.</p>
+            </div>
+          </li>
+          <li class="rhythm-item">
+            <div class="rhythm-time">after<small>The message</small></div>
+            <div class="rhythm-body">
+              <h3>We pause and reflect.</h3>
+              <p>A quick overview of what we heard, then two questions: <em>What did God say to you? What are you going to do about it?</em></p>
+            </div>
+          </li>
+          <li class="rhythm-item">
+            <div class="rhythm-time">~11:30<small>Wrap up</small></div>
+            <div class="rhythm-body">
+              <h3>Pray together. Head out when you're ready.</h3>
+              <p>We take prayer requests for each other and for the week ahead. You can head home, or stay and hang out.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sermons">
+      <div class="container">
+        <a href="https://abundant-life.com/resources/sermons/" target="_blank" rel="noopener" class="sermons-card" style="color: inherit; text-decoration: none; border: none;">
+          <div class="sermons-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
+          </div>
+          <div>
+            <p class="eyebrow">The teaching</p>
+            <h2>Hear a recent message.</h2>
+            <p>The Sunday message is preached by Lead Pastor Phil Hopper at Abundant Life. You can watch recent sermons any time — a good way to taste the teaching before you come.</p>
+            <span class="btn-sermon">Browse sermons →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="wunderlich-family.jpg" alt="Dusty, Ashley, and family in front of the Bridger Mountains in Bozeman, Montana" />
+          </div>
+          <div class="about-body">
+            <p class="eyebrow">Who we are</p>
+            <h2>Dusty &amp; Ashley Wunderlich.</h2>
+            <p>We started this Church House on March 1, 2026.</p>
+            <p>For a long time, we were faithful church attenders. We showed up. We volunteered when asked. But honestly, we lived a lot of our Christian life passively — consuming on Sundays, then back to normal on Monday morning.</p>
+            <p>Reading about the early church changed something. From a few dozen believers meeting in ordinary homes, the gospel spread across cities and continents. The model wasn't complicated. It was simple, faithful people gathered around Jesus, taking responsibility for each other, sent into the world together. Decentralized. Relational. Not built around spectators.</p>
+            <p>That's what we're trying to step into. Our office at Aspen Crossing happens to be a good place to gather people around coffee and good conversation — so that's where we meet. Not because we have it all figured out. Because we don't — and we'd rather figure it out together than alone.</p>
+            <p>We're members of <a href="https://abundant-life.com" target="_blank" rel="noopener">Abundant Life Church</a>, the global church family whose service we stream each week. We're part of a growing movement of Church Houses here in the Gallatin Valley and around the world.</p>
+            <p class="about-sig">May God bless this house, this community, and the work He's beginning here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paradigm">
+      <div class="container">
+        <div class="paradigm-card">
+          <div class="paradigm-grid">
+            <div class="paradigm-body">
+              <p class="eyebrow">Also here</p>
+              <h2><em>Paradigm Post</em> is launching in Bozeman.</h2>
+              <p>This office isn't just a Sunday thing. In June 2026, three of our Church House members — <strong>Aaron, Rachel, and Hannah McGraw</strong> — are launching <strong>Paradigm Post Bozeman</strong>, the local outpost of Abundant Life's young adult ministry, meeting in this same space.</p>
+              <p>For over ten years, Paradigm has gathered young adults in Kansas City to wrestle with real-life questions through a Christian lens: dating, work, money, mental health, faith, purpose. The kind of conversations that matter when you're figuring out adulthood and want more than what culture is offering.</p>
+              <p>Now it's coming to Bozeman.</p>
+              <p>If you're between 18 and your mid-30s and looking for that kind of community — friends, teaching, honest conversation, a place to bring questions — this is for you.</p>
+            </div>
+            <aside class="paradigm-meta">
+              <h4>Launching</h4>
+              <p class="when"><em>June 2026</em></p>
+              <p class="when-note">Exact date coming soon</p>
+              <h4 style="margin-top: 1.5rem;">When</h4>
+              <p class="when"><em>Thursday</em> evenings</p>
+              <p class="when-note">Time TBD</p>
+              <h4 style="margin-top: 1.5rem;">Where</h4>
+              <p>Same office.<br>Aspen Crossing, Suite 200C.</p>
+              <a href="https://abundant-life.com/get-involved/young-adults/" target="_blank" rel="noopener" class="meta-link">Learn more about Paradigm →</a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="believe">
+      <div class="container">
+        <div class="believe-card">
+          <p class="eyebrow">What we believe</p>
+          <h2>Jesus. The Bible. The historical Christian faith.</h2>
+          <p>The short version is one line. The longer version is Abundant Life's full Statement of Faith — you can <a href="https://abundant-life.com/who-we-are/" target="_blank" rel="noopener">read it on their site</a>.</p>
+          <p style="margin-top: 1rem;">If you have questions about what we believe, we'd love to answer them. There's no question too basic, weird, or hard. Ask us in person Sunday — or send a message below.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>What to expect</h2>
+        <div class="faq-list">
+          <div class="faq-item"><div class="faq-q">What should I wear?</div><div class="faq-a">Come as you are.</div></div>
+          <div class="faq-item"><div class="faq-q">Can I bring my kids?</div><div class="faq-a">Yes. We're kid-friendly. For kids five and under, we have a kids area with toys and Bible story time, supervised by an adult. Kids six and older are free-range — they can sit through the sermon or have room to roam and quietly play.</div></div>
+          <div class="faq-item"><div class="faq-q">Do I have to know anything about the Bible?</div><div class="faq-a">No. Whether you've never opened one or you've read it ten times, you're welcome.</div></div>
+          <div class="faq-item"><div class="faq-q">Am I going to be put on the spot?</div><div class="faq-a">No. We don't ask anyone to speak, pray, or share unless they want to. You can come, sit, watch, and listen. That's plenty.</div></div>
+          <div class="faq-item"><div class="faq-q">What if I'm not sure I believe?</div><div class="faq-a">Even better. Come anyway. We'd rather have you here honestly unsure than faking certainty.</div></div>
+          <div class="faq-item"><div class="faq-q">Is there parking?</div><div class="faq-a">Yes. Street parking on Aspen and the surrounding streets, plus the building lot. Sundays are quiet in the area.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="come-sunday">
+      <div class="container">
+        <h2>Come <em>this Sunday</em>.</h2>
+        <p class="cta-lead">Want to come this Sunday? Or just have a question? Send us a note — we'd love to hear from you.</p>
+        <form class="form" action="https://formspree.io/f/xnjrknwa" method="POST">
+          <div class="form-row"><label for="name">Your name</label><input type="text" id="name" name="name" required /></div>
+          <div class="form-row"><label for="email">Email</label><input type="email" id="email" name="email" required /></div>
+          <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" placeholder="Hi Dusty &amp; Ashley — I'd love to come this Sunday. (Or ask anything.)" required></textarea></div>
+          <div class="checkbox"><input type="checkbox" id="firsttime" name="firsttime" /><label for="firsttime" style="margin: 0; letter-spacing: 0; text-transform: none; font-size: 14px; color: var(--ink-soft); font-weight: 400;">This would be my first time</label></div>
+          <div class="form-submit"><button type="submit" class="btn btn-primary">Send the note</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Where</h4><p>515 W Aspen Street<br>Suite 200C<br>Bozeman, MT 59715</p></div>
+        <div><h4>When</h4><p>Sundays<br>9:45 AM — Doors open<br>10:00 AM — Service</p></div>
+        <div><h4>Part of</h4><p><a href="https://abundant-life.com" target="_blank" rel="noopener">Abundant Life Church</a><br>The Church House movement<br><a href="https://livingproof.co" target="_blank" rel="noopener">livingproof.co</a></p></div>
+      </div>
+      <p class="footer-verse">"You shall be witnesses to Me… to the ends of the earth."<cite>Acts 1:8</cite></p>
+    </div>
+  </footer>
+</body>
+</html>
