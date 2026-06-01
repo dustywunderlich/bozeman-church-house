@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero — Church house first, verse below</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300..700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --cream:#FAF6EF; --cream-deep:#F2EBDE; --ink:#1F1B17; --ink-soft:#4A423B; --ink-mute:#847A6F; --rule:#E0D6C2; --al-blue:#2C5F84; --al-blue-deep:#1F4665; --tan:#B89878; --display:"Fraunces",Georgia,serif; --body:"Geist",sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:var(--body); color:var(--ink); background:var(--cream); font-size:17px; line-height:1.65; }
+    h1, h2, h3 { font-family:var(--display); font-weight:500; line-height:1.1; margin:0; }
+    p { margin:0 0 1em; }
+    .container { max-width:1180px; margin:0 auto; padding:0 2.5rem; }
+    .topnav { padding:1.75rem 0; border-bottom:1px solid var(--rule); }
+    .topnav .container { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+    .brand { font-family:var(--display); font-weight:500; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.01em; color:var(--ink); text-decoration:none; font-variation-settings:"opsz" 144,"SOFT" 30; }
+    .brand .dot { color:var(--al-blue); }
+    .cta-link { font-size:14px; color:var(--ink-soft); text-decoration:none; }
+    .label-bar { background:var(--ink); color:var(--cream); padding:1rem 0; text-align:center; }
+    .label-bar h2 { color:var(--cream); font-size:1.2rem; font-weight:400; }
+    .label-bar p { color:var(--cream); opacity:0.7; font-size:13px; margin:0.2rem 0 0; font-family:var(--body); }
+    .hero { padding:clamp(4rem,8vw,6rem) 0 clamp(3rem,6vw,4.5rem); text-align:center; }
+    .hero-stack { max-width:680px; margin:0 auto; }
+    .ch-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:1.5rem; }
+    .ch-headline { font-size:clamp(2.25rem,4.5vw,3.5rem); font-weight:400; line-height:1.05; letter-spacing:-0.02em; color:var(--ink); margin-bottom:1rem; max-width:16ch; margin-left:auto; margin-right:auto; font-variation-settings:"opsz" 144,"SOFT" 50; }
+    .ch-headline .italic { font-style:italic; color:var(--al-blue); font-variation-settings:"opsz" 144,"SOFT" 100; }
+    .ch-sub { font-family:var(--display); font-style:italic; font-size:clamp(1.1rem,1.7vw,1.3rem); color:var(--ink-soft); margin-bottom:2rem; }
+    .ch-meta { display:flex; justify-content:center; gap:2.5rem; margin-bottom:2rem; font-size:14px; color:var(--ink-soft); flex-wrap:wrap; }
+    .ch-meta strong { display:block; font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:4px; }
+    .btn { display:inline-block; padding:14px 28px; font-size:14px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; border:none; border-radius:2px; cursor:pointer; text-decoration:none; }
+    .btn-primary { background:var(--al-blue); color:var(--cream); }
+    .divider { display:flex; align-items:center; justify-content:center; gap:14px; margin:3rem auto 2.5rem; width:fit-content; color:var(--tan); }
+    .divider::before, .divider::after { content:""; width:36px; height:1px; background:currentColor; }
+    .divider svg { width:12px; height:12px; }
+    .verse-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:1.5rem; }
+    .verse { font-family:var(--display); font-style:italic; font-weight:300; font-size:clamp(1.65rem,3.4vw,2.5rem); line-height:1.25; color:var(--ink); max-width:24ch; margin:0 auto 1rem; letter-spacing:-0.005em; font-variation-settings:"opsz" 144,"SOFT" 100; }
+    .verse .accent { color:var(--al-blue); }
+    .verse-citation { font-family:var(--body); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-mute); margin:0; }
+  </style>
+</head>
+<body>
+<header class="topnav"><div class="container"><a href="#" class="brand">Bozeman Church House<span class="dot">.</span></a><a href="#" class="cta-link">Come this Sunday →</a></div></header>
+<div class="label-bar"><div class="container"><h2>Church house first — verse anchors below</h2><p>Practical info leads. Scripture grounds the bottom as the "why."</p></div></div>
+<section class="hero"><div class="container"><div class="hero-stack">
+<p class="ch-eyebrow">Welcome</p>
+<h1 class="ch-headline">Church, in an <span class="italic">office</span> in Midtown Bozeman.</h1>
+<p class="ch-sub">Come find church where you didn't expect it.</p>
+<div class="ch-meta"><div><strong>When</strong>Sundays · 10:00 AM Service</div><div><strong>Where</strong>Aspen Crossing — Midtown<br>515 W. Aspen Street, 200C</div></div>
+<a href="#" class="btn btn-primary">Come this Sunday</a>
+<div class="divider"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 L21 12 L12 21 L3 12 Z" /></svg></div>
+<p class="verse-eyebrow">Our why</p>
+<p class="verse">I came that they may have life, and have it <span class="accent">abundantly</span>.</p>
+<p class="verse-citation">— John 10:10</p>
+</div></div></section>
+<div style="background:var(--cream-deep); padding:3rem 0; border-top:1px solid var(--rule);">
+<div class="container" style="max-width:800px;">
+<h2 style="font-size:1.3rem; font-weight:500; margin-bottom:1rem;">What this flip does</h2>
+<p style="color:var(--ink-soft); font-size:15px; line-height:1.7;">The first thing a visitor sees is now <em>welcome and practical info</em> — what this is, when, where, and how to come. The "Come this Sunday" button is reachable above the fold, which is the action you want.</p>
+<p style="color:var(--ink-soft); font-size:15px; line-height:1.7; margin-top:1rem;">The verse anchors below as the <em>why</em> — present, but not the entry point. A curious neighbor doesn't have to cross a theological threshold to find out where you meet. The verse is there to discover, not to gatekeep.</p>
+</div>
+</div>
+</body>
+</html>
